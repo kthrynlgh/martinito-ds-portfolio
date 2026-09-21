@@ -1,0 +1,112 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+ 
+project:
+  id: kathryn-martinito-ds-portfolio
+  title: "Kathryn's Data Science Portfolio"
+  short_title: "DS Portfolio"
+  description: "Coursework, lab activities, and projects for DS413 - DS Elective 4: Deep Learning."
+  keywords:
+    - data science
+    - deep learning
+    - machine learning
+    - portfolio
+  authors:
+    - name: "Kathryn Leigh A. Martinito"
+      email: kathrynleigh.martinito@1.ustp.edu.ph
+      github: kthrynlgh
+      affiliations:
+        - institution: "University of Science and Technology of Southern Philippines"
+          department: "Data Science Program"
+
+ 
+  numbering:
+    heading_2: true     
+    heading_3: false
+    figure: true
+    table: true
+    equation: true
+    code: true
+ 
+
+  abbreviations:
+    EDA: Exploratory Data Analysis
+    CNN: Convolutional Neural Network
+    RNN: Recurrent Neural Network
+    MLP: Multilayer Perceptron
+    ReLU: Rectified Linear Unit
+    SGD: Stochastic Gradient Descent
+ 
+  math:
+    '\R': '\mathbb{R}'
+    '\xvec': '\mathbf{x}'
+    '\wvec': '\mathbf{w}'
+ 
+  exclude:
+    - README.md
+    - templates/**
+    - "**/.ipynb_checkpoints/**"
+    - "**/data/**"
+ 
+
+  toc:
+    - file: intro.md
+ 
+    - title: Assignments
+      children:
+        - file: assignments/index.md
+        - file: assignments/assignment-01.ipynb
+        - file: assignments/assignment-02.ipynb
+ 
+    - title: Lab Activities
+      children:
+        - file: lab-activities/index.md
+        - file: lab-activities/lab-exercise-01.ipynb
+        - file: lab-activities/lab-exercise-02.ipynb
+        - file: lab-activities/lab-exercise-03.ipynb
+ 
+    - title: Projects
+      children:
+        - file: projects/index.md
+        - file: projects/project-01.ipynb
+        - file: projects/project-02.ipynb
+ 
+    - title: Reference
+      children:
+        - file: reference/glossary.md
+        - file: reference/resources.md
+ 
+site:
+  template: book-theme
+  title: "Kathryn Leigh's Data Science Portfolio"
+  options:
+    logo_text: "DS Portfolio"
+    # favicon: _static/favicon.ico
+    # logo: _static/logo.svg
+    # logo_dark: _static/logo-dark.svg
+    style: _static/custom.css   
+ 
+
+    hide_toc: false            
+    hide_outline: false        
+    outline_maxdepth: 3        
+    hide_title_block: false
+    hide_footer_links: false   
+    hide_search: false
+    folders: true              
+ 
+  nav:
+    - title: Assignments
+      url: /assignments/index
+    - title: Lab Activities
+      url: /lab-activities/index
+    - title: Projects
+      url: /projects/index
+    - title: GitHub
+      url: https://github.com/kthrynlgh/
+ 
+  actions:
+    - title: Download CV
+      url: https://example.com/your-cv.pdf
+      static: false
+ 

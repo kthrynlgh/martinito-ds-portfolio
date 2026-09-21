@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Custom styles for the DS portfolio (MyST book-theme)
+   Referenced from myst.yml -> site.options.style
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Keep the right-hand "On this page" outline usable on long notebooks.
+   Without this, a page with many headings pushes the outline off-screen.
+   -------------------------------------------------------------------------- */
+[aria-label="Document Outline"] {
+  max-height: calc(100vh - 100px) !important;
+  overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Cap tall cell outputs so a 500-row dataframe or a long training log
+   scrolls inside its own box instead of stretching the page.
+   Selectors are deliberately broad because the theme's class names can
+   change between versions; delete any that don't apply.
+   -------------------------------------------------------------------------- */
+.jupyter-output,
+.myst-static-output-wrapper,
+div[data-mime-type="text/plain"],
+div[data-mime-type="application/vnd.jupyter.stderr"],
+div[data-mime-type="application/vnd.jupyter.stdout"] {
+  max-height: 28rem;
+  overflow: auto;
+}
+
+/* Wide dataframes scroll sideways instead of overflowing the column. */
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Long code inputs get their own scroll box rather than a very tall cell. */
+pre {
+  max-height: 34rem;
+  overflow: auto;
+}
+
+/* --------------------------------------------------------------------------
+   3. Smooth in-page jumps, with room so anchors don't hide under the header.
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  scroll-margin-top: 5rem;
+}
+
+/* --------------------------------------------------------------------------
+   4. Readability
+   -------------------------------------------------------------------------- */
+main p,
+main li {
+  line-height: 1.7;
+}
+
+/* A little more air between sections so long notebooks don't feel like a wall. */
+main h2 {
+  margin-top: 2.5em;
+}
+
+/* Figures centred with a caption that reads as a caption. */
+figcaption {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
