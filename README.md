@@ -3,7 +3,9 @@
 A Jupyter Book portfolio of my coursework for **DS413 — DS Elective 4: Deep Learning**, Academic Year 2026–2027.
 
 **Kathryn Leigh A. Martinito**
+
 4th Year, BS Data Science
+
 University of Science and Technology of Southern Philippines
 
 ## About
