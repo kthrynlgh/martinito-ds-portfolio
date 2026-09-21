@@ -1,124 +1,36 @@
-# Portfolio guide
+# My Data Science Portfolio
 
-How this site is put together and how to add new work. This file is excluded from the built site (see `project.exclude` in `myst.yml`).
+A Jupyter Book portfolio of my coursework for **DS413 — DS Elective 4: Deep Learning**, Academic Year 2026–2027.
 
-## Folder structure
+**Kathryn Leigh A. Martinito**
+4th Year, BS Data Science
+University of Science and Technology of Southern Philippines
 
-```
-.
-├── myst.yml                     # site configuration
-├── intro.md                     # landing page
-├── _static/
-│   ├── custom.css               # scrolling + readability tweaks
-│   └── favicon.ico              # (add your own)
-├── assignments/
-│   ├── index.md                 # section landing page + status table
-│   ├── assignment-01.ipynb
-│   └── data/                    # per-notebook data, excluded from the build
-├── lab-activities/
-│   ├── index.md
-│   └── lab-exercise-01.ipynb
-├── projects/
-│   ├── index.md
-│   └── project-01.ipynb
-├── reference/
-│   ├── glossary.md
-│   └── resources.md
-└── templates/                   # copy these; excluded from the build
-    ├── TEMPLATE-assignment.ipynb
-    ├── TEMPLATE-lab-activity.ipynb
-    └── TEMPLATE-project.ipynb
-```
+## About
 
-## Adding new work
+This portfolio collects the work I submit for the course: assignments, lab activities, and projects. Each notebook documents the full process rather than only the final output — the problem, the data, the approach I chose, the results, and what I took away from it.
 
-1. Copy the matching template out of `templates/` into the right folder.
-2. Rename it with zero-padded numbering: `assignment-03.ipynb`, `lab-exercise-04.ipynb`, `project-03.ipynb`. Zero padding keeps files sorted correctly past number 9.
-3. Fill in the YAML frontmatter in the first markdown cell (`title`, `short_title`, `date`, `description`).
-4. Add the file to the `toc` in `myst.yml`.
-5. Add a row to the section's `index.md` table and to the tracker on `intro.md`.
+The site is built with [MyST](https://mystmd.org) (Jupyter Book) and published as a browsable website.
 
-## Naming conventions
+## Contents
 
-| Thing | Convention | Example |
-|---|---|---|
-| Files | lowercase, hyphens, zero-padded | `lab-exercise-03.ipynb` |
-| Folders | lowercase, hyphens | `lab-activities/` |
-| Notebook title | `Type NN: Descriptive Title` | `Project 01: Forecasting Rainfall in Misamis Oriental` |
-| `short_title` | under ~20 characters | `Project 01` |
+| Section | What's in it |
+|---|---|
+| **Assignments** | Graded problem sets applying concepts from lecture. |
+| **Lab Activities** | Hands-on exercises completed during lab sessions. |
+| **Projects** | Longer, self-directed work covering a full pipeline from problem framing to evaluation. |
+| **Reference** | A glossary of terms and a list of datasets, tools, and readings. |
 
-`short_title` is what appears in the sidebar. Without it, long titles wrap and make the navigation hard to scan.
+Work within each section is numbered chronologically, so the order reflects how the course progressed.
 
-## Page structure
+## Viewing the portfolio
 
-Every notebook follows the same six sections so readers always know where to look:
+The published site is the easiest way to read it (https://kthrynlgh.github.io/martinito-ds-portfolio/).
 
-**Overview → Setup → Data → Method → Results → Reflection**
+Individual notebooks can also be opened directly in Jupyter.
 
-Use `##` for these sections and `###` for subsections. Don't go deeper than `###`; the page outline is set to depth 3.
+## Contact
 
-## Keeping pages scrollable
-
-Long notebooks are the main readability problem in a DS portfolio. Four things fix most of it:
-
-1. **Collapse the noise.** Tag cells in Jupyter (View → Cell Toolbar → Tags, or the property panel in JupyterLab):
-   - `hide-input` — hides the code, keeps the output. Use for import cells and plotting code.
-   - `hide-output` — hides the output, keeps the code. Use for training logs.
-   - `hide-cell` — hides both, with a button to reveal.
-   - `remove-input` / `remove-output` / `remove-cell` — gone entirely, no reveal button.
-2. **Cap output height.** `_static/custom.css` puts tall outputs and wide tables in their own scroll boxes, so a 500-row dataframe doesn't add three screens of scrolling.
-3. **Split, don't stretch.** If a notebook passes roughly 40 cells, split it into two pages and nest both under one TOC entry. One page per idea beats one page per week.
-4. **Use the outline.** `outline_maxdepth: 3` gives readers a working "On this page" jump list on the right — but only if your headings are consistent.
-
-Also worth using: `:::{dropdown} Show derivation` for long side explanations, and `::::{tab-set}` for alternative approaches you don't want stacked vertically.
-
-## Useful MyST directives
-
-```markdown
-:::{note} Title
-Content.
-:::
-
-:::{admonition} Custom title
-:class: tip     <!-- tip, warning, important, seealso, danger -->
-Content.
-:::
-
-:::{dropdown} Click to expand
-Hidden until clicked.
-:::
-
-::::{tab-set}
-:::{tab-item} Python
-Content.
-:::
-:::{tab-item} R
-Content.
-:::
-::::
-
-::::{grid} 1 1 2 2
-:::{card} Title
-:link: ./page.md
-Body.
-:::
-::::
-```
-
-## Build and preview
-
-```bash
-pip install mystmd            # or: npm install -g mystmd
-myst start                    # live preview at localhost:3000
-myst build --html             # static build
-```
-
-## Before you publish
-
-- [ ] Every notebook runs top to bottom from a fresh kernel
-- [ ] No absolute paths (`C:\Users\...`) — use relative paths like `data/file.csv`
-- [ ] No credentials, API keys, or personal data in any cell
-- [ ] Every figure has axis labels with units and a caption
-- [ ] Every notebook has a filled-in Reflection section
-- [ ] Datasets are credited in References
-- [ ] The tracker table on `intro.md` matches reality
+- GitHub: [kthrynlgh](https://github.com/kthrynlgh)
+- Email: kathrynleigh.martinito@1.ustp.edu.ph
+- LinkedIn: [kathryn-leigh-martinito](https://linkedin.com/in/kathryn-leigh-martinito/)
