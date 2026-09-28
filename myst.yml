@@ -108,8 +108,3 @@ site:
     - title: GitHub
       url: https://github.com/kthrynlgh/
  
-'''  actions:
-    - title: Download CV
-      url: https://example.com/your-cv.pdf
-      static: false'''
- 
