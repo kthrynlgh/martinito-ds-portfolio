@@ -66,6 +66,7 @@ project:
         - file: lab-activities/lab-exercise-03.ipynb
         - file: lab-activities/lab-exercise-04.ipynb
         - file: lab-activities/lab-exercise-05.ipynb
+        - file: lab-activities/lab-exercise-06.ipynb
  
     - title: Projects
       children:
