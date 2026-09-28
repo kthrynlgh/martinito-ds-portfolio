@@ -15,3 +15,4 @@ Shorter, hands-on exercises completed during lab sessions. These are more experi
 | 03 | [*Linear Regression in PyTorch*](./lab-exercise-03.ipynb) | *01_Understanding Deep Learning* | *Laboratory Task 4* |
 | 04 | [*PyTorch Tensor Basics*](./lab-exercise-04.ipynb) | *02_PyTorch Basics* | *Laboratory Task 5* |
 | 05 | [*Converting a CNN Architecture Diagram into PyTorch*](./lab-exercise-05.ipynb) | *E1 - CNN Implementation* | *Laboratory Task 6* |
+| 06 | [*Image Classification Using Pre-trained Models*](./lab-exercise-06.ipynb) | *E1 - CNN Implementation* | *Laboratory Task 6* |
