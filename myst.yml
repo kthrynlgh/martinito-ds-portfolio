@@ -56,7 +56,6 @@ project:
       children:
         - file: assignments/index.md
         - file: assignments/assignment-01.ipynb
-        - file: assignments/assignment-02.ipynb
  
     - title: Lab Activities
       children:
@@ -71,8 +70,6 @@ project:
     - title: Projects
       children:
         - file: projects/index.md
-        - file: projects/project-01.ipynb
-        - file: projects/project-02.ipynb
  
     - title: Reference
       children:
